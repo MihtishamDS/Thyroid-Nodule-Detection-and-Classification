@@ -1,0 +1,10 @@
+Flask
+ultralytics
+opencv-python
+numpy
+Pillow
+matplotlib
+scikit-learn
+PyYAML
+torch
+torchvision

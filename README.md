@@ -1,3 +1,12 @@
+---
+title: Thyroid Nodule Detection and Classification
+emoji: 🩺
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🩺 Thyroid Nodule Detection and Classification using YOLOv8
 
 ## 📖 Overview
@@ -9,7 +18,7 @@ The system automatically detects thyroid nodules and classifies them into:
 - 🟢 Benign
 - 🔴 Malignant
 
-The application is built using Flask for the backend and provides a user-friendly web interface for uploading ultrasound images and viewing prediction results with confidence scores.
+The application is built using Flask and provides a simple, responsive web interface where users can upload thyroid ultrasound images and receive prediction results with confidence scores and detected bounding boxes.
 
 ---
 
@@ -27,33 +36,31 @@ The application is built using Flask for the backend and provides a user-friendl
 
 # 🧠 Model
 
-Model: YOLOv8 Nano (YOLOv8n)
+**Model:** YOLOv8 Nano (YOLOv8n)
 
-Framework:
+**Framework:**
 - Ultralytics YOLOv8
 
-Training Parameters:
+**Training Parameters**
 
 - Epochs: 100
 - Image Size: 640 × 640
 - Batch Size: 16
 - Optimizer: Default YOLO Optimizer
-- Early Stopping: 20 Patience
+- Early Stopping: Patience = 20
 
 ---
 
 # 📂 Dataset
 
-Dataset Name:
+**Dataset:** TN5000 Thyroid Ultrasound Dataset
 
-TN5000 Thyroid Ultrasound Dataset
-
-Classes:
+**Classes**
 
 - Benign
 - Malignant
 
-Dataset Structure:
+**Dataset Structure**
 
 ```
 Annotations/
@@ -68,7 +75,7 @@ The XML annotations were converted into YOLO format before training.
 # 📊 Model Performance
 
 | Metric | Value |
-|---------|--------|
+|---------|---------|
 | Accuracy | 90.86% |
 | Precision | 90.71% |
 | Recall | 90.86% |
@@ -80,11 +87,11 @@ The XML annotations were converted into YOLO format before training.
 
 - Python
 - Flask
-- YOLOv8
+- Ultralytics YOLOv8
 - OpenCV
 - NumPy
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Bootstrap
 - Scikit-learn
@@ -99,56 +106,57 @@ Thyroid-Nodule-Detection-and-Classification/
 │── app.py
 │── README.md
 │── requirements.txt
+│── Dockerfile
 │── LICENSE
 │
 ├── model/
-│     └── best.pt
-│
-├── notebooks/
+│   └── best.pt
 │
 ├── templates/
-│     └── index.html
+│   └── index.html
 │
 ├── static/
-│     ├── css/
-│     ├── js/
-│     ├── uploads/
-│     └── predictions/
+│   ├── css/
+│   │   └── index.css
+│   ├── js/
+│   │   └── index.js
+│   ├── uploads/
+│   └── predictions/
 │
+├── notebooks/
 ├── screenshots/
-│
-└── dataset/
+└── .gitignore
 ```
 
 ---
 
 # 🚀 Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/MihtishamDS/Thyroid-Nodule-Detection-and-Classification.git
 ```
 
-Go to the project folder
+### Go to the project folder
 
 ```bash
 cd Thyroid-Nodule-Detection-and-Classification
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser
+### Open your browser
 
 ```
 http://127.0.0.1:5000
@@ -162,33 +170,28 @@ http://127.0.0.1:5000
 
 ![Home Page](screenshots/homepage.png)
 
----
-
 ## 📤 Upload Image
 
 ![Upload Image](screenshots/upload.png)
-
----
 
 ## 🟢 Benign Prediction
 
 ![Benign Result](screenshots/benign_result.png)
 
----
-
 ## 🔴 Malignant Prediction
 
 ![Malignant Result](screenshots/malignant_result.png)
+
 ---
 
 # 🔮 Future Improvements
 
 - Improve detection accuracy using larger YOLO models
 - Train with additional thyroid ultrasound datasets
-- Deploy the application using Render
 - Add Grad-CAM visualization for explainable AI
 - Develop a mobile-friendly version
 - Support real-time ultrasound image analysis
+- Deploy on cloud platforms
 
 ---
 
@@ -196,7 +199,7 @@ http://127.0.0.1:5000
 
 **Muhammad Ihtisham**
 
-BS in Computer Science
+BS Computer Science
 
 Government Degree College Lal Qilla Maidan
 
@@ -206,4 +209,6 @@ https://github.com/MihtishamDS
 
 ---
 
-# ⭐ If you found this project helpful, consider giving it a star!
+# ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
